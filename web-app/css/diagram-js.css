@@ -238,25 +238,27 @@ svg.new-parent {
 
 /**
  * palette
- * Paulo - Alinhamento da caixa de ferramenta
  */
 
 .djs-palette {
   position: absolute;
-  left: 10px;
-  top: 70px;
-  width: 60px;
+  left: 20px;
+  top: 20px;
+
+  width: 46px;
 }
 
+.djs-container.two-column .djs-palette.open {
+  width: 94px;
+}
 
-/**
 .djs-palette .separator {
   margin: 3px 5px 5px 5px;
   border: none;
   border-top: solid 1px #DDD;
 
   clear: both;
-}*/
+}
 
 .djs-palette .entry:before {
   vertical-align: middle;
@@ -265,14 +267,12 @@ svg.new-parent {
 .djs-palette .djs-palette-toggle {
   cursor: pointer;
 }
-/*
-* Paulo
-* Classe cuida tamanho icones
-*/
+
 .djs-palette .entry,
 .djs-palette .djs-palette-toggle {
-  color: #1b91d6;
-  font-size: 40px;
+  color: #333;
+  font-size: 30px;
+
   text-align: center;
 }
 
@@ -284,32 +284,47 @@ svg.new-parent {
   max-width: 100%;
 }
 
+.djs-palette.open .djs-palette-toggle {
+  height: 10px;
+}
 
-/*
-* Cor dos icones paleta
-*/
+.djs-palette .djs-palette-entries:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.djs-palette:not(.open) .djs-palette-entries {
+  display: none;
+}
+
+.djs-palette .djs-palette-toggle:hover {
+  background: #666;
+}
+
 .djs-palette .entry:hover {
-  color: rgb(19, 242, 223); //Nao tirar cor 
+  color: rgb(255, 116, 0);
 }
 
 .highlighted-entry {
   color: rgb(255, 116, 0) !important;
 }
 
-
-
-/**
- * Paulo
- * Caixa de ferramenta 
- */
- 
-.djs-palette .entry,
-.djs-palette .djs-palette-toggle {
-  width: 60px;
-  height: 46px;
-  cursor: pointer;
+.djs-palette:not(.open) {
+  overflow: hidden;
 }
 
+.djs-palette .entry,
+.djs-palette .djs-palette-toggle {
+  width: 46px;
+  height: 46px;
+  line-height: 46px;
+  cursor: default;
+}
+
+.djs-palette.open .djs-palette-toggle {
+  width: 100%;
+}
 
 /**
  * context-pad
@@ -364,17 +379,15 @@ svg.new-parent {
   cursor: default;
 }
 
-/* larger font for prefixed icons 
-Cuida da parte menu dos gatwyas
-*/
+/* larger font for prefixed icons */
 .djs-popup .entry:before {
   vertical-align: middle;
-  font-size: 40px;
+  font-size: 20px;
 }
 
 .djs-popup .entry > span {
   vertical-align: middle;
-  font-size: 24px;
+  font-size: 14px;
 }
 
 .djs-popup .entry:hover,
@@ -385,18 +398,16 @@ Cuida da parte menu dos gatwyas
 .djs-popup .entry.disabled {
   background: inherit;
 }
-/*
-* cuida do menu suspenso.
-*/
+
 .djs-popup .entry.active {
   color: rgb(255, 116, 0);
   border: solid 1px rgb(255, 116, 0);
-  border-radius: 30px;
+  border-radius: 3px;
   background-color: #F6F6F6;
 }
 
 .djs-popup-body .entry {
-  padding: 20px 10px 2px 5px;
+  padding: 2px 10px 2px 5px;
 }
 
 .djs-popup-header .entry {
@@ -427,16 +438,12 @@ Cuida da parte menu dos gatwyas
 
 /**
  * popup / palette styles
- * Paulo
- * Paleta
  */
 .djs-popup, .djs-palette {
-
   background: #FAFAFA;
-  border: solid 1px #1b91d6;
-  border-radius: 10px;
-  box-shadow: 0 2px 2px rgba(0,0,0,0.3);
-
+  border: solid 1px #CCC;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 /**
@@ -460,15 +467,14 @@ Cuida da parte menu dos gatwyas
   fill: rgba(255, 255, 121, 0.2);
   stroke-width: 1px;
   stroke-opacity: 1;
-  stroke: ;
+  stroke: rgba(255, 255, 121, 0.3);
 }
-// Paulo
-// Stroke: black --> Blue
+
 .djs-bendpoint .djs-visual {
   fill: rgba(255, 255, 121, 0.8);
   stroke-width: 1px;
   stroke-opacity: 0.5;
-  stroke: blue;
+  stroke: black;
 }
 
 .djs-segment-dragger:hover,
@@ -492,9 +498,9 @@ Cuida da parte menu dos gatwyas
 .djs-segment-dragger.djs-dragging .djs-visual,
 .djs-bendpoint:hover .djs-visual,
 .djs-bendpoint.floating .djs-visual {
-  fill: blue;
+  fill: yellow;
   stroke-opacity: 0.5;
-  stroke: blue;
+  stroke: black;
 }
 
 .djs-bendpoint.floating .djs-hit {
@@ -504,7 +510,7 @@ Cuida da parte menu dos gatwyas
 .djs-segment-dragger .djs-hit,
 .djs-bendpoint .djs-hit {
   pointer-events: all;
-  fill: blue;
+  fill: none;
 }
 
 .djs-segment-dragger.horizontal .djs-hit {

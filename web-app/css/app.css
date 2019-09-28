@@ -65,7 +65,7 @@
 }
 /* line 60, node_modules/bpmn-js-properties-panel/styles/properties.less */
 .bpp-properties-panel [contenteditable] {
-  outline: 0px solid transparent;
+  outline: 10px solid transparent;
   background-color: white;
   overflow-y: auto;
   white-space: pre-wrap;
@@ -715,7 +715,7 @@ a:link {
 /* line 102, styles/app.less */
 .buttons > li > a {
   background: #DDD;
-  border: solid 1px #666;
+  border: solid 10 px #666;
   display: inline-block;
   padding: 5px;
 }
@@ -728,15 +728,18 @@ a:link {
   opacity: 1;
 }
 /* line 119, styles/app.less */
+/*Modificado para Esconder a Barra de Ferramentas*/
 .properties-panel-parent {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
-  width: 260px;
+  /*width: 260px;
   z-index: 10;
   border-left: 1px solid #ccc;
-  overflow: auto;
+  overflow: auto;*/
+   border-left: 1px solid #ccc;
+   left:100;
 }
 /* line 128, styles/app.less */
 .properties-panel-parent:empty {
