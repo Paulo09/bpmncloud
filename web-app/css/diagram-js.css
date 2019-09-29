@@ -285,7 +285,7 @@ svg.new-parent {
 }
 
 .djs-palette.open .djs-palette-toggle {
-  height: 10px;
+  /* height: 10px; */
 }
 
 .djs-palette .djs-palette-entries:after {
@@ -317,8 +317,8 @@ svg.new-parent {
 .djs-palette .entry,
 .djs-palette .djs-palette-toggle {
   width: 46px;
-  height: 46px;
-  line-height: 46px;
+  /*height: 46px;
+  line-height: 46px;*/
   cursor: default;
 }
 
@@ -330,7 +330,7 @@ svg.new-parent {
  * context-pad
  */
 .djs-overlay-context-pad {
-  width: 72px;
+  width: 720px;
 }
 
 .djs-context-pad {
@@ -340,18 +340,18 @@ svg.new-parent {
 }
 
 .djs-context-pad .entry {
-  width: 22px;
-  height: 22px;
+  /*width: 22px;
+  height: 22px;*/
   text-align: center;
   display: inline-block;
   font-size: 22px;
   margin: 0 2px 2px 0;
 
-  border-radius: 3px;
+  border-radius: 30px;
 
   cursor: default;
 
-  background-color: #FEFEFE;
+  background-color: #ddd;
   box-shadow: 0 0 2px 1px #FEFEFE;
 
   pointer-events: all;
